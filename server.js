@@ -154,4 +154,6 @@ app.post('/profile', (req, res) => {
     res.send(user)
 })*/
 
-app.listen(process.env.PORT)
+app.listen(process.env.PORT || 3001, () => {
+    console.log(`App is running on port ${process.env.PORT}`)
+})
